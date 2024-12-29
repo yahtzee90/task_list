@@ -2,17 +2,17 @@
 
   const tasks = [
     {
+      content: "Wziąć się do roboty.",
+      done: true,
+    },
+    {
       content: "zrobić listę",
-      done: false,
+      done: true,
     },
     {
       content: "poprawić stylizację",
       done: false,
     },
-    {
-      content: "Wziąć się do roboty.",
-      done: true,
-    }
   
   ];
 
@@ -47,13 +47,18 @@
 
   };
 
+  const focus = () => {
+    document.querySelector("#js-taskValue").value = "";
+    document.querySelector("#js-taskValue").focus();
+  };
+
   const addNewTask = (newTask) => {
     tasks.push({
       content: newTask,
       done: false,
     });
-
     render();
+    focus();
   };
 
   const removeTask = (taskIndex) => {
@@ -75,12 +80,11 @@
       const newTask = document.querySelector("#js-taskValue").value.trim();
 
       if(newTask === "") {
+        focus();
         return;
       }
 
       addNewTask(newTask);
-      document.querySelector("#js-taskValue").value = "";
-      document.querySelector("#js-taskValue").focus();
 
     });
 
