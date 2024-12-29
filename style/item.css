@@ -16,15 +16,20 @@
   height: 24px;
   line-height: 24px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.70);
+  color: green;
   background-color: green;
   line-height: auto:
   flex: 0 0 auto;
   cursor: pointer;
 }
 
+.item__check--done {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
 .item__check:hover {
   background-color: rgba(0, 128, 0, 0.8);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .item__value {
@@ -50,4 +55,10 @@
 
 .item__value--done {
   text-decoration: line-through;
+}
+
+@media (pointer:coarse) {
+  .item__check {
+    color: rgba(255, 255, 255, 0.15);
+  }
 }

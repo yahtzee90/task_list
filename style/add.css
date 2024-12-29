@@ -23,6 +23,8 @@
   gap: 15px;
 }
 
+
+
 .add__input-box {
   font-size: 14px;
   flex: 1 0 max-content;
@@ -47,4 +49,24 @@
 
 .add__input-submit:active {
   background-color: rgba(0, 128, 128, 0.8);
+}
+
+
+
+@media (width <= 464px) {
+
+  .add__input {
+    height: 120px;
+    flex-direction: column;
+  }
+  
+  
+  
+  .add__input-box {
+    flex: auto;
+  }
+  
+  .add__input-submit {
+    flex: auto;
+  }
 }

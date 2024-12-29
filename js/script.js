@@ -13,6 +13,18 @@
       content: "poprawić stylizację",
       done: false,
     },
+    {
+      content: "poprawić ptaszek",
+      done: false,
+    },
+    {
+      content: "responsive media query",
+      done: false,
+    },
+    {
+      content: "przenoszenie do nowych linii",
+      done: false,
+    },
   
   ];
 
@@ -22,7 +34,7 @@
     for(const task of tasks) {
       htmlString += `
         <li class="item">
-          <div class="item__check js-done">&#10004;</div>
+          <div class="item__check${task.done ? " item__check--done" : ""} js-done">&#10004;</div>
           <span class="item__value${task.done ? " item__value--done" : ""}">${task.content}</span>
           <div class="item__delete js-delete">&#128465;</div>
         </li>
