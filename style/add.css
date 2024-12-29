@@ -35,8 +35,16 @@
 .add__input-submit {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.70);
-  background-color: teal;
+  background-color: rgb(0, 128, 128);
   border: none;
   border-radius: 2px;
-  
+  cursor: pointer;;
+}
+
+.add__input-submit:hover {
+  background-color: rgba(0, 128, 128, 0.9);
+}
+
+.add__input-submit:active {
+  background-color: rgba(0, 128, 128, 0.8);
 }

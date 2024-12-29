@@ -21,13 +21,22 @@
 
     for(const task of tasks) {
       htmlString += `
-        <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-          ${task.content}
-        </li$>
+        <li class="item">
+          <div class="item__check">&#10004;</div>
+          <span class="item__value${task.done ? " item__value--done" : ""}">${task.content}</span>
+          <div class="item__delete js-delete">&#128465;</div>
+        </li>
       `;
     };
 
     document.querySelector("#js-listContent").innerHTML = htmlString;
+
+    const deleteButtons = document.querySelectorAll(".js-delete")
+    deleteButtons.forEach((deleteButton, taskIndex) => {
+      deleteButton.addEventListener("click", () => {
+        removeTask(taskIndex);
+      });
+    });
 
   };
 
@@ -40,6 +49,11 @@
     render();
   };
 
+  const removeTask = (taskIndex) => {
+    tasks.splice(taskIndex, 1);
+    render();
+  };
+
   const init = () => {
     render();
 
@@ -47,13 +61,14 @@
 
     taskAdd.addEventListener("click", () => {
       const newTask = document.querySelector("#js-taskValue").value.trim();
-      // console.log(newTask);
 
       if(newTask === "") {
         return;
       }
 
       addNewTask(newTask);
+      document.querySelector("#js-taskValue").value = "";
+      document.querySelector("#js-taskValue").focus();
 
     });
 

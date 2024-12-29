@@ -7,6 +7,10 @@
   gap: 15px;
 }
 
+.item:hover {
+  background-color: rgb(245, 245, 245);
+}
+
 .item__check {
   aspect-ratio: 1 / 1;
   height: 24px;
@@ -16,6 +20,11 @@
   background-color: green;
   line-height: auto:
   flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.item__check:hover {
+  background-color: rgba(0, 128, 0, 0.8);
 }
 
 .item__value {
@@ -32,4 +41,13 @@
   text-align: center;
   color: rgba(255, 255, 255, 0.70);
   background-color: red;
+  cursor: pointer;
+}
+
+.item__delete:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.item__value--done {
+  text-decoration: line-through;
 }
