@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task List</title>
 
-    <link
-      rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
-    />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/add.css" />
     <link rel="stylesheet" href="style/list.css" />
     <link rel="stylesheet" href="style/item.css" />
+
     <script src="/js/script.js" defer></script>
   </head>
   <body>
@@ -22,8 +20,8 @@
       <form class="add">
         <label class="add__label" for="taskInput">Dodaj nowe zadanie</label>
         <div class="add__input">
-          <input class="add__input-box" type="text" placeholder="Co jest do zrobienia?">
-          <input class="add__input-submit" type="button" value="Dodaj zadanie">
+          <input class="add__input-box" id="js-taskValue" type="text" placeholder="Co jest do zrobienia?">
+          <input class="add__input-submit" id="js-taskAdd" type="button" value="Dodaj zadanie">
         </div>
       </form>
 

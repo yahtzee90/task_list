@@ -21,9 +21,9 @@
 
     for(const task of tasks) {
       htmlString += `
-        <li>
+        <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
           ${task.content}
-        </li>
+        </li$>
       `;
     };
 
@@ -31,10 +31,32 @@
 
   };
 
+  const addNewTask = (newTask) => {
+    tasks.push({
+      content: newTask,
+      done: false,
+    });
 
+    render();
+  };
 
   const init = () => {
     render();
+
+    const taskAdd = document.querySelector("#js-taskAdd");
+
+    taskAdd.addEventListener("click", () => {
+      const newTask = document.querySelector("#js-taskValue").value.trim();
+      // console.log(newTask);
+
+      if(newTask === "") {
+        return;
+      }
+
+      addNewTask(newTask);
+
+    });
+
   };
 
   init();
