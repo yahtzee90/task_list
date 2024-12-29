@@ -34,9 +34,15 @@
 
 .item__value {
   font-size: 14px;
-  height: 24px;
+  /* padding: 10px; */
+  /* height: 24px; */
   line-height: 24px;
-  flex: 1 0 max-content;
+  flex: 1 1 auto;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
+  word-break: break-word;
 }
 
 .item__delete {
@@ -44,6 +50,7 @@
   height: 24px;
   line-height: 24px;
   text-align: center;
+  align-self: flex-end;
   color: rgba(255, 255, 255, 0.70);
   background-color: red;
   cursor: pointer;
