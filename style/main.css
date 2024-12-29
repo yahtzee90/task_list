@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.container {
+  width: 800px;
+}
+
+.title {
+  font-size: 26px;
+  margin: 18px 0 15px 0;
+}

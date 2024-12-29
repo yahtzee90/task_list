@@ -1,0 +1,35 @@
+.item {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.item__check {
+  aspect-ratio: 1 / 1;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.70);
+  background-color: green;
+  line-height: auto:
+  flex: 0 0 auto;
+}
+
+.item__value {
+  font-size: 14px;
+  height: 24px;
+  line-height: 24px;
+  flex: 1 0 max-content;
+}
+
+.item__delete {
+  aspect-ratio: 1 / 1;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.70);
+  background-color: red;
+}
