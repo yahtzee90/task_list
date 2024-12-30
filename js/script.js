@@ -60,6 +60,7 @@
 
   const init = () => {
     render();
+    focus();
 
     const taskAdd = document.querySelector("#js-taskAdd");
 
@@ -73,6 +74,23 @@
 
       addNewTask(newTask);
 
+    });
+
+
+    const taskInput = document.querySelector("#js-taskValue");
+
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        const newTask = taskInput.value.trim();
+
+        if (newTask === "") {
+          focus();
+          return;
+        }
+
+        addNewTask(newTask);
+      };
     });
 
   };
