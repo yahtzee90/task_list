@@ -1,31 +1,6 @@
 {
 
-  const tasks = [
-    {
-      content: "Wziąć się do roboty.",
-      done: true,
-    },
-    {
-      content: "zrobić listę",
-      done: true,
-    },
-    {
-      content: "poprawić stylizację",
-      done: false,
-    },
-    {
-      content: "poprawić ptaszek",
-      done: false,
-    },
-    {
-      content: "responsive media query",
-      done: false,
-    },
-    {
-      content: "przenoszenie do nowych linii",
-      done: false,
-    },
-  
+  const tasks = [  
   ];
 
   const render = () => {

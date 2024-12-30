@@ -13,12 +13,14 @@
 
     <script src="/js/script.js" defer></script>
   </head>
+
   <body>
+    
     <div class="container">
       <h1 class="title">Lista zadań</h1>
 
       <form class="add">
-        <label class="add__label" for="taskInput">Dodaj nowe zadanie</label>
+        <label class="add__label" for="js-taskValue">Dodaj nowe zadanie</label>
         <div class="add__input">
           <input class="add__input-box" id="js-taskValue" type="text" placeholder="Co jest do zrobienia?" autocomplete="off">
           <input class="add__input-submit" id="js-taskAdd" type="button" value="Dodaj zadanie">
@@ -31,12 +33,11 @@
         <ul class="list__content" id="js-listContent">
           <li class="item">
             <div class="item__check js-done">&#10004;</div>
-            <span class="item__value">task 1</span>
+            <span class="item__value">Can you see me?</span>
             <div class="item__delete js-delete">&#128465;</div>
           </li>
         </ul>
       </div>
-
 
     </div>
   </body>
